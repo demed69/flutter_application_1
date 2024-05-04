@@ -50,7 +50,12 @@ class HomePage extends StatelessWidget {
         selectedItemColor: Colors.amber[800],
         unselectedItemColor: Colors.black,
         onTap: (int index) {
-          // Tidak ada aksi yang diambil ketika indeks adalah 3
+          if (index == 3) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => LoginScreen()),
+            );
+          }
         },
       ),
     );
